@@ -17,7 +17,7 @@ def process_jpg_files(path: Path) -> set:
         if path.suffix.lower() in ['.jpg', '.jpeg']:
             serial = truncate_first_20(path.stem)
             serial_data.add(serial)
-            print(f"Processed: {path.name} → Serial: {serial}")
+            print(f"Processed: {path.name} -> Serial: {serial}")
         else:
             print(f"Warning: '{path.name}' is not a JPG file")
     
@@ -36,7 +36,7 @@ def process_jpg_files(path: Path) -> set:
         for filepath in jpg_files:
             serial = truncate_first_20(filepath.stem)
             serial_data.add(serial)
-            print(f"Processed: {filepath.name} → Serial: {serial}")
+            print(f"Processed: {filepath.name} -> Serial: {serial}")
     
     return serial_data
 
